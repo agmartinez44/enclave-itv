@@ -1,0 +1,10 @@
+replicaCount: 2
+image:
+  tag: "latest" # or SHA
+nodeSelector:
+  stage: prod
+tolerations:
+  - key: "key"
+    operator: "Equal"
+    value: "critical"
+    effect: "NoSchedule"
